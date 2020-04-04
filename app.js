@@ -15,7 +15,7 @@ let wrongPoints = 0;
 let strikePoints = 0;
 let topScore = localStorage.getItem("highScore");
 let min = 0;
-let max = 99
+let max = 99;
 let numA = parseFloat(((Math.random() * (max - min) + min)).toFixed(2));
 let numB = parseFloat(((Math.random() * (max - min) + min)).toFixed(2));
 let currentOperation = "sum";
@@ -43,9 +43,10 @@ menu.addEventListener("click", function (e) {
   }
   if (e.target.innerHTML == "Dzielenie") {
     currentOperation = "division";
-    max = 50;
+    max = 20;
   }
 
+  isCorrect.innerHTML = "";
   showNewNumbers();
 
 })
@@ -62,6 +63,7 @@ function highScore() {
   if (strikePoints >= localStorage.getItem("highScore")) {
     localStorage.setItem("highScore", strikePoints);
     strikeCount.innerHTML = strikePoints;
+    topCount.innerHTML = strikePoints
   }
 }
 
@@ -85,6 +87,7 @@ function check() {
   }
 
   console.log(total);
+  highScore();
 
   if (answer.value == sum && currentOperation == "sum" ||
     answer.value == substraction && currentOperation == "substraction" ||
