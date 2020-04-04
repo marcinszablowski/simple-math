@@ -1,0 +1,179 @@
+body {
+  background-color: #222222;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: white;
+  font-family: 'Fira Code', monospace;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  text-align: center;
+  width: 70%;
+}
+
+.points {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.numbers {
+  border: 8px solid white;
+  font-size: 5vw;
+  padding: 20px;
+}
+
+#answer {
+  flex: 5;
+  background: none;
+  border: none;
+  border-bottom: 3px solid white;
+  width: 50%;
+  height: 100px;
+  margin-top: 10px;
+  outline: none;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  color: white;
+  font-size: 5vw;
+}
+
+.button {
+  flex: 1;
+  margin-left: 40px;
+  background: none;
+  border: 8px solid white;
+  height: 100px;
+  font-family: 'Fira Code', monospace;
+  color: white;
+  font-size: 18px;
+  align-self: flex-end;
+  outline: none;
+  cursor: pointer;
+}
+
+.submit-area {
+  display: flex;
+}
+
+#is-correct {
+  text-align: left;
+  font-size: 30px;
+  position: absolute;
+  left: 15%;
+}
+
+.points {
+  font-size: 30px;
+  opacity: 0.6;
+}
+
+#menu {
+  position: absolute;
+  display: flex;
+  list-style: none;
+  opacity: 0.6
+}
+
+#menu li {
+  margin-right: 30px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.active {
+  background: white;
+  color: #222222;
+}
+
+#settings, #copy {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-size: 30px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+#copy {
+  left: 30px;
+  font-size: 10px;
+  cursor: auto;
+  opacity: 0.2;
+}
+
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  display: none;
+}
+
+.elem {
+  height: 4px;
+  width: 30px;
+  margin: 5px 0;
+  background: white;
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+
+  body {
+    height: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #form {
+    margin-top: 30%;
+  }
+
+ .submit-area {
+   flex-direction: column;
+ }
+ #answer {
+   width: 100%;
+   margin-top: 30px;
+ }
+ .button {
+   align-self: center;
+   margin: 20px 10px;
+   padding: 15px;
+ }
+
+ .points {
+   display: flex;
+   top: 10px;
+ }
+
+ .points div {
+   margin-right: 10px;
+ }
+
+ #menu {
+   display: none;
+ }
+
+ #is-correct {
+  position: absolute;
+  font-size: 16px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+
+ .numbers, .button {
+   border: 4px solid white;
+ }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧠</title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <ul id="menu">
+    <li class="menu-item active" data-item="li">Dodawanie</li>
+    <li class="menu-item" data-item="li">Odejmowanie</li>
+    <li class="menu-item" data-item="li">Mnożenie</li>
+    <li class="menu-item" data-item="li">Dzielenie</li>
+  </ul>
+
+  <div class="container">
+    <div class="form">
+      <form id="form" autocomplete="off">
+        <div class="numbers">
+          <span id="a"></span> <span id="operation"></span> <span id="b"></span> = ?
+        </div>
+        <br>
+        <div class="submit-area">
+          <input type="text" id="answer">
+          <br>
+          <input type="submit" value="Odpowiadam" class="button">
+        </div>
+        <br>
+        <div id="is-correct"></div>
+      </form>
+    </div>
+
+    <div class="points">
+      <div class="correct">
+        🧠 <span id="correct-count"></span>
+      </div>
+      <div class="wrong">
+        🦄 <span id="wrong-count"></span>
+      </div>
+      <div class="strike">
+        🚀 <span id="strike-count"></span>
+      </div>
+      <div class="high-score">
+        🏆 <span id="high-score"></span>
+      </div>
+    </div>
+    <div class="settings">
+      <span id="settings">⚙️</span>
+    </div>
+
+    <div class="hamburger">
+      <div class="elem"></div>
+      <div class="elem"></div>
+      <div class="elem"></div>
+    </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
